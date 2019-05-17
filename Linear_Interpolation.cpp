@@ -9,7 +9,10 @@ using namespace std;
 #define FILENAME1 "didymosl162_vertices.txt"
 #define FILENAME2 "didymosl162_indices.txt"
 #define COLS 3
-
+int N,M,L; // number of vertices, indices, adj_distances
+vector<vector<double> > vec;
+vector<vector<int> >    ind;
+vector <double>         adjacent_distances;
 template <typename T>
 
 // Reading data files, containing either (x,y,z) FLOAT coordinates (FILENAME1), or INT indices (FILENAME2)
@@ -124,7 +127,7 @@ int main(int argc, char** argv) {
 	data(FILENAME1, vec, &N);
 	indexdata(FILENAME2, ind, &M);
 	dmax = max_minDistance(N);
-    distance_to_coordinates(dmax, N, &max1, &max2);
+        distance_to_coordinates(dmax, N, &max1, &max2);
 
 	//Interpolate max distance
 	linear_interpolation(max1,max2,N);
