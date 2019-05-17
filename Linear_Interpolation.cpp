@@ -125,7 +125,7 @@ int main(int argc, char** argv) {
 	int max1=0 , max2=0;
 	double dmax;
 	data(FILENAME1, vec, &N);
-	indexdata(FILENAME2, ind, &M);
+	data(FILENAME2, ind, &M);
 	dmax = max_minDistance(N);
         distance_to_coordinates(dmax, N, &max1, &max2);
 
